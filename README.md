@@ -37,8 +37,10 @@ Tests:
 
 ## Potential extension points
 
+* input data validation (is argument present, is valid URL)
 * Scaling through messaging solution like Kafka and putting workers on Kubernetes alike platform
 * try Favicon?
 * don't use Internet in tests. Serve local webpage to make exact asserts in tests
+* evaluate JS on pages to get more links (through Selenium?)
 
 
