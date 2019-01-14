@@ -29,6 +29,7 @@ Tests:
 [ ] implement core ones
 [ ] preapre E2E correctness check
 [ ] implement multithreaded version
+[ ] Dockerfile
 
 ## Considerations
 
@@ -37,4 +38,7 @@ Tests:
 ## Potential extension points
 
 * Scaling through messaging solution like Kafka and putting workers on Kubernetes alike platform
+* try Favicon?
+* don't use Internet in tests. Serve local webpage to make exact asserts in tests
+
 
