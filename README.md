@@ -25,8 +25,8 @@ Tests:
 
 ## Plan
 
-[ ] define abstractions
-[ ] implement core ones
+[x] define abstractions
+[x] implement core ones
 [ ] preapre E2E correctness check
 [ ] implement multithreaded version
 [ ] Dockerfile
