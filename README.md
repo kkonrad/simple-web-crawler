@@ -42,5 +42,6 @@ Tests:
 * try Favicon?
 * don't use Internet in tests. Serve local webpage to make exact asserts in tests
 * evaluate JS on pages to get more links (through Selenium?)
+* don't download big/binary files etc.
 
 
