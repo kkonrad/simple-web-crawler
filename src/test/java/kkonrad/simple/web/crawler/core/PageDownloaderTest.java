@@ -1,25 +1,27 @@
 package kkonrad.simple.web.crawler.core;
 
+import kkonrad.simple.web.crawler.core.webprocessing.JSoupBasedPageDownloader;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.IOException;
 import java.util.List;
 
 import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.assertThat;
 
+
+// Should be parametric on PageDownloader implementations
 public class PageDownloaderTest {
 
     private PageDownloader pageDownloader;
 
     @Before
     public void init() {
-        pageDownloader = new PageDownloader();
+        pageDownloader = new JSoupBasedPageDownloader();
     }
 
     @Test
-    public void testDownloadAndLinksDetection() throws IOException {
+    public void testDownloadAndLinksDetection() {
         Link sampleLink = new Link("http://traprooms.pl");
         WebPage page = pageDownloader.download(sampleLink);
         List<Link> links = page.getLinks();

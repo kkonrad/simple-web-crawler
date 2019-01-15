@@ -2,7 +2,6 @@ package kkonrad.simple.web.crawler.core;
 
 import kkonrad.simple.web.crawler.core.resultsprocessing.CrawlingResultsProcessor;
 
-import java.io.IOException;
 import java.util.Collections;
 
 public class Crawler {
@@ -15,7 +14,7 @@ public class Crawler {
         this.pageDownloader = pageDownloader;
     }
 
-    public void crawl(Link seed, CrawlingResultsProcessor resultsProcessor) throws IOException {
+    public void crawl(Link seed, CrawlingResultsProcessor resultsProcessor) {
         orchestrator.addNewLinks(Collections.singletonList(seed));
         while (!orchestrator.isDone()) {
             Link nextLink = orchestrator.next();

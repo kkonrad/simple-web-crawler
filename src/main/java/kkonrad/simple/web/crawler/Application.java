@@ -2,7 +2,7 @@ package kkonrad.simple.web.crawler;
 
 import kkonrad.simple.web.crawler.core.Crawler;
 import kkonrad.simple.web.crawler.core.Link;
-import kkonrad.simple.web.crawler.core.PageDownloader;
+import kkonrad.simple.web.crawler.core.webprocessing.JSoupBasedPageDownloader;
 import kkonrad.simple.web.crawler.core.orchestration.SimpleCrawlingOrchestrator;
 import kkonrad.simple.web.crawler.core.resultsprocessing.LinksCollectingCrawlingResultsProcessor;
 import org.springframework.boot.SpringApplication;
@@ -25,7 +25,7 @@ public class Application {
 
         Crawler crawler = new Crawler(
                 new SimpleCrawlingOrchestrator(),
-                new PageDownloader()
+                new JSoupBasedPageDownloader()
         );
 
         LinksCollectingCrawlingResultsProcessor resultsProcessor = new LinksCollectingCrawlingResultsProcessor();
