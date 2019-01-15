@@ -37,21 +37,28 @@ public class JSoupBasedPageDownloader implements PageDownloader {
     }
 
     private List<Link> getLinks(Document document) {
-        return extractLinks(document, "a[href]", "abs:href");
+        List<Link> links = extractLinks(document, "a[href]", "abs:href");
+        List<Link> frames = extractLinks(document, "frame[src]", "abs:src");
+        return joinLists(links, frames);
     }
 
     private List<Link> getOtherLinks(Document document) {
         List<Link> media = extractLinks(document, "[src]", "abs:src");
         List<Link> imports = extractLinks(document, "link[href]", "abs:href");
-        return Stream.concat(media.stream(), imports.stream())
-                .collect(Collectors.toList());
+        return joinLists(media, imports);
     }
 
     private List<Link> extractLinks(Document document, String selectQuery, String attrKey) {
         return document.select(selectQuery)
                 .stream()
                 .map(element -> element.attr(attrKey))
+                .filter(attr -> attr != null && !attr.isEmpty())
                 .map(Link::new)
+                .collect(Collectors.toList());
+    }
+
+    private <T> List<T> joinLists(List<T> list1, List<T> list2) {
+        return Stream.concat(list1.stream(), list2.stream())
                 .collect(Collectors.toList());
     }
 }
