@@ -25,11 +25,11 @@ Tests:
 
 ## Plan
 
-[x] define abstractions
-[x] implement core ones
-[ ] preapre E2E correctness check
-[ ] implement multithreaded version
-[ ] Dockerfile
+- [x] define abstractions
+- [x] implement core ones
+- [ ] preapre E2E correctness check
+- [ ] implement multithreaded version
+- [ ] Dockerfile
 
 ## Considerations
 
@@ -43,5 +43,6 @@ Tests:
 * don't use Internet in tests. Serve local webpage to make exact asserts in tests
 * evaluate JS on pages to get more links (through Selenium?)
 * don't download big/binary files etc.
+* metrics collection (througput, errors, successes etc.)
 
 
