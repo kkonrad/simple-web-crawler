@@ -5,6 +5,7 @@ plugins {
 
 apply plugin: 'java'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: "jacoco"
 
 repositories {
     jcenter()

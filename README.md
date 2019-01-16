@@ -21,7 +21,14 @@ Tests:
 ```
 ./gradlew test
 ```
+Open in browser report file `build/reports/tests/test/index.html`
 
+With coverage:
+```
+./gradlew test jacocoTestReport
+```
+
+Open in browser report file `build/reports/jacoco/test/html/index.html`
 
 ## Plan
 
