@@ -45,5 +45,6 @@ Tests:
 * evaluate JS on pages to get more links (through Selenium?)
 * don't download big/binary files etc.
 * metrics collection (througput, errors, successes etc.)
+* maybe skip # part in links as those are mostly about "internal" to webpage links
 
 
