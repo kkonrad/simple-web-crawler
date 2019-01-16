@@ -2,11 +2,13 @@ package kkonrad.simple.web.crawler;
 
 import kkonrad.simple.web.crawler.core.Crawler;
 import kkonrad.simple.web.crawler.core.Link;
-import kkonrad.simple.web.crawler.core.orchestration.SimpleCrawlingOrchestrator;
+import kkonrad.simple.web.crawler.core.orchestration.SingleDomainCrawlingOrchestrator;
 import kkonrad.simple.web.crawler.core.resultsprocessing.LinksCollectingCrawlingResultsProcessor;
 import kkonrad.simple.web.crawler.core.webprocessing.JSoupBasedPageDownloader;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.net.URI;
 
 @SpringBootApplication
 public class Application {
@@ -20,9 +22,10 @@ public class Application {
 
     public static void crawlPage(String pageUrl) {
         Link seedLink = new Link(pageUrl);
+        URI domain = URI.create(pageUrl);
 
         Crawler crawler = new Crawler(
-                new SimpleCrawlingOrchestrator(),
+                new SingleDomainCrawlingOrchestrator(domain),
                 new JSoupBasedPageDownloader()
         );
 

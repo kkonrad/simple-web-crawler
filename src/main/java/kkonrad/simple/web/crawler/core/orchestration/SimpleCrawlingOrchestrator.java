@@ -24,10 +24,12 @@ public class SimpleCrawlingOrchestrator implements CrawlingOrchestrator {
 
     @Override
     public void addNewLinks(Collection<Link> links) {
-        for (Link link: links) {
-            if (noLongerRelevant.add(link)) {
-                enqueuedLinks.add(link);
-            }
+        links.forEach(this::addLink);
+    }
+
+    protected void addLink(Link link) {
+        if (noLongerRelevant.add(link)) {
+            enqueuedLinks.add(link);
         }
     }
 

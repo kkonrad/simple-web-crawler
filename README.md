@@ -34,6 +34,7 @@ Tests:
 ## Considerations
 
 * Plan on using Spring Boot from the very begining. Probably overkill for this project.
+* Assuming that same domain means no acceptance for subdomains. It also implies the same protocol (either HTTP or HTTPS) and port.
 
 ## Potential extension points
 
