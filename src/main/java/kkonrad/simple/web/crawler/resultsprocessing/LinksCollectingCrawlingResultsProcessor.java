@@ -1,5 +1,6 @@
 package kkonrad.simple.web.crawler.resultsprocessing;
 
+import kkonrad.simple.web.crawler.core.CrawlingResultsProcessor;
 import kkonrad.simple.web.crawler.core.Link;
 import kkonrad.simple.web.crawler.core.WebPage;
 

@@ -1,27 +1,6 @@
 package kkonrad.simple.web.crawler.core;
 
-import kkonrad.simple.web.crawler.resultsprocessing.CrawlingResultsProcessor;
+public interface Crawler {
 
-import java.util.Collections;
-
-public class Crawler {
-
-    private CrawlingOrchestrator orchestrator;
-    private PageDownloader pageDownloader;
-
-    public Crawler(CrawlingOrchestrator orchestrator, PageDownloader pageDownloader) {
-        this.orchestrator = orchestrator;
-        this.pageDownloader = pageDownloader;
-    }
-
-    public void crawl(Link seed, CrawlingResultsProcessor resultsProcessor) {
-        orchestrator.addNewLinks(Collections.singletonList(seed));
-        while (!orchestrator.isDone()) {
-            Link nextLink = orchestrator.next();
-            WebPage page = pageDownloader.download(nextLink);
-            resultsProcessor.addNewResult(page);
-            orchestrator.addNewLinks(page.getLinks());
-        }
-    }
-
+    void crawl(Link seed, CrawlingResultsProcessor resultsProcessor);
 }

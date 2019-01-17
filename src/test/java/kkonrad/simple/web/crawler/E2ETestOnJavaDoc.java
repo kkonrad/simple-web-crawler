@@ -1,6 +1,6 @@
 package kkonrad.simple.web.crawler;
 
-import kkonrad.simple.web.crawler.core.Crawler;
+import kkonrad.simple.web.crawler.crawlers.SimpleCrawler;
 import kkonrad.simple.web.crawler.core.CrawlingOrchestrator;
 import kkonrad.simple.web.crawler.core.Link;
 import kkonrad.simple.web.crawler.core.WebPage;
@@ -28,7 +28,7 @@ public class E2ETestOnJavaDoc {
             Application.class,
             WebPage.class,
             Link.class,
-            Crawler.class,
+            SimpleCrawler.class,
             CrawlingOrchestrator.class
     );
 
