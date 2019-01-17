@@ -23,7 +23,7 @@ import static org.junit.Assert.assertThat;
 // Should be parametric on PageDownloader implementations
 public class E2ETestOnJavaDoc {
 
-    // TODO use relfection
+    // TODO use reflection
     private static final List<Class<?>> EXISTING_CODE_CLASSES = Lists.list(
             Application.class,
             WebPage.class,
