@@ -30,6 +30,24 @@ With coverage:
 
 Open in browser report file `build/reports/jacoco/test/html/index.html`
 
+
+Enable E2E tests (might require `clean`):
+
+1. Generate JavaDoc:
+```
+./gradlew javadoc
+```
+
+2. Go to `build/docs` folder and run:
+```
+python -m SimpleHTTPServer
+```
+
+3. Execute tests
+```
+./gradlew test jacocoTestReport
+```
+
 ## Plan
 
 - [x] define abstractions

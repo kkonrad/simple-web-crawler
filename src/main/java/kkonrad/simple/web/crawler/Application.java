@@ -17,10 +17,19 @@ public class Application {
         SpringApplication.run(Application.class, args);
 
         String pageUrl = args[0];
-        crawlPage(pageUrl);
+        crawlPageAndPrintUrls(pageUrl);
     }
 
-    public static void crawlPage(String pageUrl) {
+    public static void crawlPageAndPrintUrls(String pageUrl) {
+        LinksCollectingCrawlingResultsProcessor resultsProcessor = crawlPage(pageUrl);
+        resultsProcessor.getLinks()
+                .stream()
+                .map(Link::getTo)
+                .sorted()
+                .forEach(System.out::println);
+    }
+
+    public static LinksCollectingCrawlingResultsProcessor crawlPage(String pageUrl) {
         Link seedLink = new Link(pageUrl);
         URI domain = URI.create(pageUrl);
 
@@ -31,11 +40,6 @@ public class Application {
 
         LinksCollectingCrawlingResultsProcessor resultsProcessor = new LinksCollectingCrawlingResultsProcessor();
         crawler.crawl(seedLink, resultsProcessor);
-
-        resultsProcessor.getLinks()
-                .stream()
-                .map(Link::getTo)
-                .sorted()
-                .forEach(System.out::println);
+        return resultsProcessor;
     }
 }
