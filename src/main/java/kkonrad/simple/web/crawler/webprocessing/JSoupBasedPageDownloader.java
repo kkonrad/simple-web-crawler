@@ -1,4 +1,4 @@
-package kkonrad.simple.web.crawler.core.webprocessing;
+package kkonrad.simple.web.crawler.webprocessing;
 
 import kkonrad.simple.web.crawler.core.Link;
 import kkonrad.simple.web.crawler.core.PageDownloader;

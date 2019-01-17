@@ -1,4 +1,4 @@
-package kkonrad.simple.web.crawler.core.orchestration;
+package kkonrad.simple.web.crawler.orchestration;
 
 import kkonrad.simple.web.crawler.core.Link;
 import org.junit.Test;

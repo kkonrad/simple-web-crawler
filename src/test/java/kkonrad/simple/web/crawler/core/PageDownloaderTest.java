@@ -1,6 +1,6 @@
 package kkonrad.simple.web.crawler.core;
 
-import kkonrad.simple.web.crawler.core.webprocessing.JSoupBasedPageDownloader;
+import kkonrad.simple.web.crawler.webprocessing.JSoupBasedPageDownloader;
 import org.junit.Before;
 import org.junit.Test;
 

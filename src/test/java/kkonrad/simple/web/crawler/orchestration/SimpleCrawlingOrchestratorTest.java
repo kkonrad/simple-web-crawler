@@ -1,4 +1,4 @@
-package kkonrad.simple.web.crawler.core.orchestration;
+package kkonrad.simple.web.crawler.orchestration;
 
 public class SimpleCrawlingOrchestratorTest extends CrawlingOrchestratorTest<SimpleCrawlingOrchestrator> {
     @Override

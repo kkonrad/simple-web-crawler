@@ -1,4 +1,4 @@
-package kkonrad.simple.web.crawler.core.resultsprocessing;
+package kkonrad.simple.web.crawler.resultsprocessing;
 
 import kkonrad.simple.web.crawler.core.WebPage;
 

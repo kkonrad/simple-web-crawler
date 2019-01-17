@@ -1,6 +1,6 @@
 package kkonrad.simple.web.crawler.core;
 
-import kkonrad.simple.web.crawler.core.resultsprocessing.CrawlingResultsProcessor;
+import kkonrad.simple.web.crawler.resultsprocessing.CrawlingResultsProcessor;
 
 import java.util.Collections;
 

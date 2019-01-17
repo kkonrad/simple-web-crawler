@@ -4,7 +4,7 @@ import kkonrad.simple.web.crawler.core.Crawler;
 import kkonrad.simple.web.crawler.core.CrawlingOrchestrator;
 import kkonrad.simple.web.crawler.core.Link;
 import kkonrad.simple.web.crawler.core.WebPage;
-import kkonrad.simple.web.crawler.core.resultsprocessing.LinksCollectingCrawlingResultsProcessor;
+import kkonrad.simple.web.crawler.resultsprocessing.LinksCollectingCrawlingResultsProcessor;
 import org.assertj.core.util.Lists;
 import org.junit.Assume;
 import org.junit.Before;

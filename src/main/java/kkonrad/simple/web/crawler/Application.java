@@ -2,9 +2,9 @@ package kkonrad.simple.web.crawler;
 
 import kkonrad.simple.web.crawler.core.Crawler;
 import kkonrad.simple.web.crawler.core.Link;
-import kkonrad.simple.web.crawler.core.orchestration.SingleDomainCrawlingOrchestrator;
-import kkonrad.simple.web.crawler.core.resultsprocessing.LinksCollectingCrawlingResultsProcessor;
-import kkonrad.simple.web.crawler.core.webprocessing.JSoupBasedPageDownloader;
+import kkonrad.simple.web.crawler.orchestration.SingleDomainCrawlingOrchestrator;
+import kkonrad.simple.web.crawler.resultsprocessing.LinksCollectingCrawlingResultsProcessor;
+import kkonrad.simple.web.crawler.webprocessing.JSoupBasedPageDownloader;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
