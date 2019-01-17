@@ -28,6 +28,6 @@ build/
 
 # Editors
 .idea/
-
+out/
 *.swp
 
