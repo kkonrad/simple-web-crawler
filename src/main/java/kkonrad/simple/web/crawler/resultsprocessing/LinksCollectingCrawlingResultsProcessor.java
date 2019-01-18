@@ -12,7 +12,7 @@ import java.util.Set;
  */
 public class LinksCollectingCrawlingResultsProcessor implements CrawlingResultsProcessor {
 
-    private LinkedHashSet<Link> links = new LinkedHashSet<>();
+    private final LinkedHashSet<Link> links = new LinkedHashSet<>();
 
     @Override
     public void addNewResult(WebPage webPage) {

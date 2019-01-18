@@ -11,8 +11,8 @@ import java.util.Collections;
 
 public class SimpleCrawler implements Crawler {
 
-    private CrawlingOrchestrator orchestrator;
-    private PageDownloader pageDownloader;
+    private final CrawlingOrchestrator orchestrator;
+    private final PageDownloader pageDownloader;
 
     public SimpleCrawler(CrawlingOrchestrator orchestrator, PageDownloader pageDownloader) {
         this.orchestrator = orchestrator;

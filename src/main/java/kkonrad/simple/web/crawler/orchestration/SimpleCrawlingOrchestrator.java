@@ -14,8 +14,8 @@ import java.util.Set;
  */
 public class SimpleCrawlingOrchestrator implements CrawlingOrchestrator {
 
-    private Queue<Link> enqueuedLinks = new ArrayDeque<>();
-    private Set<Link> noLongerRelevant = new HashSet<>();
+    private final Queue<Link> enqueuedLinks = new ArrayDeque<>();
+    private final Set<Link> noLongerRelevant = new HashSet<>();
 
     @Override
     public Link next() {
