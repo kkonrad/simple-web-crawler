@@ -1,5 +1,6 @@
 # Simple web crawler
 
+Threaded version is disabled by default, but you can switch code in Application class
 
 ## Requirements
 
@@ -9,10 +10,16 @@
 
 ## Usage
 
+Build jar:
+
+```
+./gradlew bootJar
+```
+
 Starting app:
 
 ```
-./gradlew bootRun
+java -jar ./build/libs/simple-web-crawler.jar <domain_URL>
 ```
 
 
@@ -52,8 +59,8 @@ python -m SimpleHTTPServer
 
 - [x] define abstractions
 - [x] implement core ones
-- [ ] preapre E2E correctness check
-- [ ] implement multithreaded version
+- [x] preapre E2E correctness check
+- [x] implement multithreaded version
 - [ ] Dockerfile
 
 ## Considerations
@@ -72,4 +79,9 @@ python -m SimpleHTTPServer
 * metrics collection (througput, errors, successes etc.)
 * maybe skip # part in links as those are mostly about "internal" to webpage links
 
+
+
+## FindBugs
+
+It reports one warning, but it is false possitive. Increment of volatile variable is happening in synchronized section.
 
