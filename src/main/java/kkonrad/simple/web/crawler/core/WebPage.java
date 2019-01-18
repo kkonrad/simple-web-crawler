@@ -16,8 +16,8 @@ public class WebPage {
 
     public static WebPage emptyWebPage() {
         return WebPage.builder()
-                .links(Collections.EMPTY_LIST)
-                .others(Collections.EMPTY_LIST)
+                .links(Collections.emptyList())
+                .others(Collections.emptyList())
                 .build();
     }
 
