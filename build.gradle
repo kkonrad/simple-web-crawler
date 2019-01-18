@@ -1,6 +1,7 @@
 plugins {
     id 'org.springframework.boot' version '2.1.1.RELEASE'
     id 'io.franzbecker.gradle-lombok' version '1.14'
+    id 'findbugs'
 }
 
 apply plugin: 'java'
@@ -17,3 +18,9 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled false
+        html.enabled true
+    }
+}
