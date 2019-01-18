@@ -48,9 +48,6 @@ public class ThreadedCrawler implements Crawler {
     }
 
     private synchronized Link nextLink() {
-        if (scheduled == processed && orchestrator.isDone()) { // we are done
-            return null;
-        }
         while (scheduled != processed && orchestrator.isDone()) {
             // it is not done, just waits for Runnable to finish page processing,
             // "while" because there might be nothing more returned for crawling
