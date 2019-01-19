@@ -78,6 +78,8 @@ python -m SimpleHTTPServer
 * don't download big/binary files etc.
 * metrics collection (througput, errors, successes etc.)
 * maybe skip # part in links as those are mostly about "internal" to webpage links
+* try to handle not correct URLs (now workaround to skip those)
+* implement infinite loop prevention (ex when pages are genrated)
 
 
 
